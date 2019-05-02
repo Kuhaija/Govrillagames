@@ -1,0 +1,401 @@
+<nav class="navbar navbar-expand-lg navbar-custom navbar-dark shift">
+          <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                   <li class="nav-item"><a class="nav-link" href="index.php">Etusivu</a></li>
+                   <li class="nav-item"><a class="nav-link" href="verkkokauppa.php">Verkkokauppa</a></li>
+                   <li class="nav-item"><a class="nav-link" href="tilavuokraus.php">Varaukset</a></li>
+                   <li class="nav-item"><a class="nav-link" href="yhteystiedot.php">Yhteystiedot</a></li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item active">
+                        <a class ="nav-link" href="https://www.facebook.com/">
+                            <span class="sr-only">(current)</span>
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class ="nav-link" href="https://www.facebook.com/">
+                            <span class="sr-only">(current)</span>
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                    </li>
+                </ul>
+                
+            </div>
+        </nav>
+        
+        
+        
+        
+        
+        
+        
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom shift">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse">
+                <a class="navbar-brand" href="#">
+                  <img src="http://placehold.it/150x50?text=Logo" alt="">
+                    </a>    
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link" href="index.php">Etusivu</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="verkkokauppa.php">Verkkokauppa</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="tilavuokraus.php">Varaukset</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="yhteystiedot.php">Yhteystiedot</a>
+                      </li>
+                    </ul>
+                    </div>
+                    
+                        <a class ="nav-link" href="https://www.facebook.com/">
+                            <span class="sr-only">(current)</span>
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                        <a class ="nav-link" href="https://www.facebook.com/">
+                            <span class="sr-only">(current)</span>
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                        <a class ="nav-link" href="https://www.facebook.com/">
+                            <span class="sr-only">(current)</span>
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                    
+            </div>
+        </nav>
+        
+        
+        
+        
+TYYLI TIEDOSTO
+
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+small {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  text-align: center;
+  padding: 50px 0;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -1px;
+  color: inherit;
+  font-size: 40px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+  font-weight: 300;
+  color: inherit;
+  padding: 50px;
+}
+
+.center {
+  text-align: center;
+}
+
+section {
+  height: 100vh;
+}
+
+
+/*näillä vähän marginaalia nav painikkeisiin mutta näitä ei tarvitse kun buttonit muuttuu*/
+
+/*Navbarin kustomointi ni ei tarvi miettiä niitä bootsträpin komentoja*/
+.navbar-custom {
+    background-color: #1C1C1C;
+}
+
+/* SHIFT */
+nav.shift ul li a {
+  position:relative;
+  z-index: 1;
+}
+nav.shift ul li a:hover {
+  color: #91640F;
+}
+nav.shift ul li a:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: '.';
+  color: transparent;
+  background: #F1C40F;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+}
+nav.shift ul li a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+/* NAVIGAATIO */
+nav {
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 0;
+  box-shadow: 0px 0px 0px #dedede;
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+
+/* Logon koko ja muu tyyli */
+.logo{
+    width: 100px;
+    height: 100px;
+    margin-top: -15px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+/*Tässä alla on verkkokauppa sivun settejä, myös figurea tosin*/
+.figure{
+    display:inline-block;
+}
+figcaption{
+    text-align:center;
+    font-weight:bold;
+}
+
+.ohjaussivu{
+    margin-top:100px;
+}
+.ohjaus{
+    width:100%;
+}
+
+/*video*/
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+/*laatikot*/
+
+.laatikko {
+  background-color: #1C1C1C;
+  Margin-top: 40px;
+  padding: 20px 20px 20px 20px;
+  border-radius: 0px;
+  margin-bottom: 1em;
+  opacity: 0.7;
+  
+}
+
+
+
+/*imagebox*/
+.kuvia {
+    width: 200px;
+    height: 50px;
+}
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+  <video autoplay muted loop id="myVideo">
+            <source src="/video/Future.mp4" type="video/mp4">
+        </video>
+        
+        
+        
+        
+        
+        
+        
+INDEXIIIIIII..................................................................................
+
+<?php require_once 'inc/top.php'; ?>
+<div>
+    <img class="d-sm d-lg-block d-xl-none d-xl-block center" src="img/gorillagamesss.png" alt="">
+</div>
+
+<div class="container laatikko">
+  <div class="row">
+    <div>
+      <h1 style="color:white; text-align:center;">GoVRillaGames on täyden viihteen talo joka tarjoaa VR huvituksia kaikenikäisille.</h2>
+      <h3 style="color:white; text-align:center;">Tekeekö mielesi ampua zombeilta päät irti vaiko ajaa rallia? meillä on sinulle ratkaisu ja vieläpä edulliseen hintaan!</h3>
+      <h3 style="color:white; text-align:center;">Baarin puolella voit käydä nauttimassa maistuvat oman kellari panimomme oluet ja pikkusuolaiset.</h3>
+      <h2> Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+      sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+      magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+      quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+      ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+      dolor in hendrerit in vulputate velit esse molestie consequat,
+      vel illum dolore eu feugiat nulla facilisis at vero eros et
+      accu</h2>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+ 
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+
+    <div class="carousel-inner suolanen">
+      <div class="item active">
+        <img src="/img/jarisillispyge.jpg" alt="jaska">
+        <div class="carousel-caption">
+      </div>
+    </div>
+
+      <div class="item">
+        <img src="/img/tuopit.jpg" alt="tuopit">
+        <div class="carousel-caption">
+      </div>
+    </div>
+    
+    <div class="item">
+        <img src="/img/nainen-koodia.jpg" alt="koodiakka">
+        <div class="carousel-caption">
+      </div>
+    </div>
+    
+    <div class="item">
+        <img src="/img/baaritiski.jpg" alt="tiski">
+        <div class="carousel-caption">
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="/img/vr-nainen.jpg" alt="naine">
+        <div class="carousel-caption">
+      </div>
+    </div>
+  </div>
+  
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  
+  </div>
+  </div>
+</div>
+<?php require_once 'inc/bottom.php'; ?>
+        
+        
+        
+  TÄMÄ KARTTA ON SE OIKEA JOTA TULEMMA KÄYTTÄMÄÄN SITTENKUN ON RAHAA KÄYTTÄÄ TÄTÄ.....................................................................
+  
+  
+  <div class="container mappi" id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(65.011118,25.469016),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+
+
+
+
+
+<audio id="audio_bgm" autoplay="autoplay" loop="true">
+<source src="/elämältäkaikensain/bensound-sexy.mp3" />
+</audio>
+<a href="#noscroll" id="togglebgm">toggle sound</a>
+
+<script>
+var audio = document.getElementById('audio_bgm');
+             
+document.getElementById('togglebgm').addEventListener('click', function (e)
+{
+e = e || window.event;
+audio.muted = !audio.muted;
+e.preventDefault();
+}, false);
+</script>
+
+
+<button onclick="window.location='/checkout/outfield-banner/1'">Add to cart</button>
